@@ -1,19 +1,36 @@
-<nav class="overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center bg-white divider-grey relative">
+      <!-- RD Navbar-->
+      <div class="rd-navbar-wrap">
+          <!-- rd-navbar rd-navbar-original rd-navbar_transparent
+            rd-navbar_transparent-landing -->
+          <nav class="rd-navbar rd-navbar-original rd-navbar-static" data-layout="rd-navbar-fixed"
+              data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
+              data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed"
+              data-xl-device-layout="rd-navbar-fixed" data-xxl-device-layout="rd-navbar-fixed"
+              data-lg-layout="rd-navbar-fullwidth" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+              data-stick-up-clone="false" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true"
+              data-xl-stick-up="true" data-xxl-stick-up="true" data-lg-stick-up-offset="20px"
+              data-xl-stick-up-offset="20px" data-xxl-stick-up-offset="20px">
+              <div class="rd-navbar-top-panel"></div>
+              <div class="rd-navbar-inner">
+                  <!-- RD Navbar Panel-->
+                  <div class="rd-navbar-panel">
+                      <button class="rd-navbar-toggle"
+                          data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                      <!-- RD Navbar Brand-->
+                      <div class="rd-navbar-brand"><a class="brand-name" href="{{ .Site.BaseURL }}"><img
+                                  src="{{ .Site.BaseURL }}images/logo.png" alt="Paramount
+                      AV Logo" width="174" height="32" /></a></div>
 
-	<!-- Logo -->
-	<a href="/" class="pa3 db mr4 h-100 w3 flex-none">
-		<img src="/img/logo.svg" alt="Kaldi logo" class="br0 db mb0 w-100"/>
-	</a>
-
-	<!-- Primary Nav -->
-	<ul class="flex b grey-3">
-		<li><a href="/products" class="pa3 no-underline db">Products</a></li>
-
-		<li><a href="/values" class="pa3 no-underline db">Values</a></li>
-
-		<li><a href="/post" class="pa3 no-underline db">Blog</a></li>
-
-		<li><a href="/contact" class="pa3 no-underline db">Contact</a></li>
-	</ul>
-
-</nav>
+                  </div>
+                  <!-- RD Navbar Nav-->
+                  <div class="rd-navbar-aside-right">
+                      <div class="rd-navbar-nav-wrap">
+                          <!-- RD Navbar Nav-->
+                          <ul class="rd-navbar-nav">
+                              {{ partial "links.html" . }}
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </nav>
+      </div>

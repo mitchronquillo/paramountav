@@ -1,6 +1,21 @@
-{{ define "main" }}
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+{{ partial "header.html" . }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/7.jpg" "title" "This is where the heading goes" "subtitle" "This is where the subtitle goes") }}
-{{ .Content }}
+<body>
+  <div class="page">
+    <div id="page-loader">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
+      </div>
+    </div>
+    <header class="page-header">
+      {{ partial "nav.html" . }}
+    </header>
+    {{ partial "breadcrumb.html" . }}
+    {{ .Content }}
+    {{ partial "brands.html" . }}
+    {{ partial "footer.html" . }}
+</body>
 
-{{ end }}
+</html>

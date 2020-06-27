@@ -1,53 +1,63 @@
-<footer class="bg-black ph3 pv4 white">
-
-	<div class="mw7 center pt3">
-
-		<div class="measure-narrow center mb4">
-
-			<img src="/img/logo.svg" alt="Kaldi logo" class="db w4 center mb4 br0">
-			<p class="f3 lh-title light-gray b tc mb2">Newsletter subscribe</p>
-			<p>Get awesome news from us in your inbox every two weeks. Be the first to learn about new products.</p>
-
-			{{ partial "newsletter-form" . }}
-
-		</div>
-
-		<div class="flex-ns justify-between">
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Kaldi</h3>
-				<ul class="mb3">
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/products" class="link">Our products</a></li>
-					<li><a href="/values" class="link">About</a></li>
-					<li><a href="/post" class="link">Blog</a></li>
-					<li><a href="/contact" class="link">Contact</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Find out more</h3>
-				<ul class="mb3">
-					<li><a href="/post/jamaica-blue/" class="link">Latest offers</a></li>
-					<li><a href="/contact" class="link">Schedule and appointment</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2">
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-instagram") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-vimeo") }}
-				</ul>
-			</div>
-
-		</div>
-	</div>
-
+<section class="section-sm bg-accent">
+    <div class="container">
+        <div class="row row-50">
+            <div class="col-md-6">
+                <h3>Serving Edmonton &amp; Surrounding Areas</h3>
+                <img src="{{ .Site.BaseURL }}images/about_areas.png" alt="">
+                <p>Paramount is proud to serve Edmonton and it's surrounding areas including: Sherwood Park, St.Albert,
+                    Ft.Saskatchewan, Spruce Grove, Stony Plain, Beaumont, Leduc, and more!</p>
+            </div>
+            <div class="col-md-6">
+                <h3>We sell TV's at Wholesale - Delivered, Mounted & Installed</h3>
+                <img src="{{ .Site.BaseURL }}images/index/wall-mount-install.png" alt="">
+                <p>Contact us to get a wholesale price on any television. We also mount / install any television whether
+                    you
+                    bought it from us or not.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer-modern">
+    <div class="container">
+        <div class="footer-modern__layer footer-modern__layer_top">
+            <a class="brand" href="{{ .Site.BaseURL }}"><img src="{{ .Site.BaseURL }}images/logo.png" width="132px"
+                    height="28px" alt="ParamountAV Logo" /></a>
+            <ul class="list-nav">
+                {{ partial "links.html" . }}
+            </ul>
+            <ul class="list-inline-xxs footer-modern__list">
+                <li><a class="icon icon-sm icon-primary fa fa-facebook" href="https://www.facebook.com/paramountav"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-modern__layer footer-modern__layer_bottom">
+            <p class="rights">
+                {{ .Site.Copyright }}
+            </p>
+            <ul class="list-bordered">
+                <li>
+                    <dl class="list-terms-minimal">
+                        <dt>Phones</dt>
+                        <dd>
+                            <ul class="list-semicolon">
+                                <li><a href="tel:(780) 965-0453">(780) 965-0453</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="list-terms-minimal">
+                        <dt>E-mail</dt>
+                        <dd><a href="mailto:chris@paramountav.ca">chris@paramountav.ca</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
 </footer>
-
-{{ partial "svg" . }}
-
-<script src="/app.js"></script>
+</div>
+<!-- Global Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
+<!-- Javascript-->
+<script src="/js/core.min.js"></script>
+<script src="/js/script.js"></script>

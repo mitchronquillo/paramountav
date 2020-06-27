@@ -1,9 +1,36 @@
 baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
-title = "Homepage"
+title = "Paramount AV"
+author = ""
+copyright = "Copyright Paramount AV 2020"
+canonifyurls = true
 
-# RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
-# https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+[menu]
+    [[menu.top]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = -160
+    [[menu.top]]
+        identifier = "gallery"
+        name = "Photo Gallery"
+        url = "/gallery/"
+        weight = -150
+    [[menu.top]]
+        identifier = "about-us"
+        name = "About Us"
+        url = "/about-us/"
+        weight = -140
+    [[menu.top]]
+        identifier = "what-we-do"
+        name = "What We Do"
+        url = "/what-we-do/"
+        weight = -130
+    [[menu.top]]
+        identifier = "contact"
+        name = "Contact"
+        url = "/contact/"
+        weight = -120
+[params]
+    [params.nav]
+        logo = "images/logo.png"
+

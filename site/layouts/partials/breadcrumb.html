@@ -1,0 +1,17 @@
+<section class="breadcrumbs-custom">
+    <div class="container">
+        <div class="breadcrumbs-custom__inner">
+            <p class="breadcrumbs-custom__title">{{  .Title }}</p>
+            <ul class="breadcrumbs-custom__path">
+                <li><a href="/">Home</a></li>
+                {{ if isset .Params "parenturl" }}
+                {{ $parentUrl := strings.TrimRight  "/" .Params.parenturl }}
+                {{ with .Site.GetPage $parentUrl }}
+                <li><a href="{{ .Permalink  }}">What We Do</a></li>
+                {{ end }}
+                {{ end }}
+                <li class="active">{{  .Title }}</li>
+            </ul>
+        </div>
+    </div>
+</section>

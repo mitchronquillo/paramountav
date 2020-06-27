@@ -1,0 +1,6 @@
+{{ $currentPage := . }}
+{{ range .Site.Menus.top }}
+<li class="{{ if $currentPage.IsMenuCurrent "top" . }}active{{ end }}">
+    <a href="{{ .URL }}">{{ .Name }}</a>
+</li>
+{{ end }}
