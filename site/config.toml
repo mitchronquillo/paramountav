@@ -4,6 +4,13 @@ author = ""
 copyright = "Copyright Paramount AV 2020"
 canonifyurls = true
 
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
 [menu]
     [[menu.top]]
         identifier = "home"
