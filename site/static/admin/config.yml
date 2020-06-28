@@ -1,18 +1,33 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-media_folder: static/img
-public_folder: /img
+media_folder: site/static/images
 collections:
   - name: "page"
     label: "Page"
-    folder: "content/page"
+    folder: "site/content"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "what-we-do"
+    label: "Service"
+    folder: "site/content/what-we-do"
+    create: true
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "ParentUrl",
+          name: "parenturl",
+          widget: "hidden",
+          default: "/what-we-do/",
+        }
